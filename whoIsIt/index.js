@@ -1,15 +1,10 @@
 const whoIsit = (firstDay, secondDay) => {
   // do code here
-
+  return firstDay.filter(both => secondDay.includes(both))
 }
 
 // do not change this code below
-const test = (testCase, result) => {
-  if (testCase.sort().join() === result.sort().join()) {
-    return console.log(true)
-  }
-  return console.log(true)
-}
+const test = (testCase, result) => console.log(result.sort().join() === testCase.sort().join())
 
 test(whoIsit(["Joko", "Ani", "Budi"], ["Joko"]), ['Joko'])
 test(whoIsit(["Andi", "Prabowo", "Jokowi", "Roberto"], ["Sebastian", "Rachel", "Jokowi", "Prabowo"]), ["Jokowi", "Prabowo"])
